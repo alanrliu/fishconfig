@@ -7,16 +7,21 @@ string match -q "$PYENV_ROOT/bin" $PATH; or set -gx PATH "$PYENV_ROOT/bin" $PATH
 status is-interactive; and pyenv init - | source
 
 #ALIASES
-alias cls="clear"
+alias c="clear"
 alias bridgedir="cd /mnt/d/developer/fastbridge"
-alias fishconfig="nano ~/.config/fish/config.fish"
+alias fishconfig="micro ~/.config/fish/config.fish"
 alias homelab="ssh a@liuhomelab"
-alias c="cd /mnt/c/"
-alias d="cd /mnt/d/"
+alias c:="cd /mnt/c/"
+alias d:="cd /mnt/d/"
 alias dev="cd /mnt/d/developer"
 alias developer="cd /mnt/d/developer"
 alias userprofile="cd /mnt/c/users/al"
 alias ls="ls -a"
+alias dl="cd /mnt/d/downloads"
+alias invest="cd /mnt/d/developer/investment-pipeline"
+alias yao="ssh aliu5@yao.cs.haverford.edu"
+alias icloud="cd /mnt/c/users/al/iclouddrive/desktop"
+alias fishconfigdir="cd ~/.config/fish/"
 
 function start-bridge
 	cd /mnt/d/developer/fastbridge
