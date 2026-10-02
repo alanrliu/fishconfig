@@ -9,22 +9,28 @@ fish_add_path ~/bin
 fish_add_path ~/.local/bin
 
 #ALIASES
-alias cls="clear"
+alias c="clear"
 alias bridgedir="cd ~/developer/fastbridge/"
 alias invest="cd ~/developer/investment-pipeline/"
 alias fishconfig="micro ~/.config/fish/config.fish"
+alias fishconfigdir="cd ~/.config/fish/"
 alias homelab="ssh a@liuhomelab"
 alias dev="cd ~/developer"
 alias ls="ls -a"
+alias l="ls -a"
 alias hc="ssh aliu5@yao.cs.haverford.edu"
-alias c="claude"
+alias cc="claude"
 alias gpt="codex"
 alias x="codex"
 
 # lab machines
 alias yao="ssh aliu5@yao.cs.haverford.edu"
 alias dean="ssh aliu5@dean.cs.haverford.edu"
-alias jones="ssh aliu5@jones.cs.haverford.edu"
+alias gray="ssh aliu5@gray.cs.haverford.edu"
+
+function lab
+    env TERM=xterm-256color ssh -tt aliu5@yao.cs.haverford.edu 'bash /homes/students/enroll_courseproject_self-service.sh'
+end
 
 function start-bridge
         cd ~/developer/fastbridge
